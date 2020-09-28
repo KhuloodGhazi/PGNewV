@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="5dp"
+        tools:context=".RegisterSpecialListActivity">
+
+
+    <!--TextView: Label Register-->
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:textAlignment="center"
+        android:text="Register"
+        android:textColor="#000"
+        android:textSize="25sp"/>
+
+        <!--EditText: Input Name-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:paddingTop="100dp"
+            android:layout_below="@id/title"
+            android:id="@+id/nameSDTIL">
+            <EditText
+                android:id="@+id/nameS"
+                android:inputType="text"
+                android:hint="Name"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EditText: Input Username-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/nameSDTIL"
+            android:id="@+id/usernameSDTIL">
+            <EditText
+                android:id="@+id/usernameS"
+                android:inputType="text"
+                android:hint="Username"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EditText: Input Email-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:layout_below="@id/usernameSDTIL"
+            android:id="@+id/emailDTIL">
+            <EditText
+                android:id="@+id/emailS"
+                android:inputType="textEmailAddress"
+                android:hint="Email"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EditText: Input Password-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/passwordDTIL"
+            android:layout_below="@id/emailDTIL"
+            app:passwordToggleEnabled="true">
+            <EditText
+                android:id="@+id/passwordS"
+                android:inputType="textPassword"
+                android:hint="Password"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--EditText: Input specialisation-->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:id="@+id/specialisationDTIL"
+            android:layout_below="@id/passwordDTIL">
+            <EditText
+                android:id="@+id/specialisationS"
+                android:inputType="text"
+                android:hint="Specialisation"
+                android:background="@color/colorWhite"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!--Button: Register User-->
+        <Button
+            android:id="@+id/registerBtnS"
+            android:text="Register"
+            android:layout_below="@id/specialisationDTIL"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="5dp"
+            style="@style/Base.Widget.AppCompat.Button.Colored"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+        <!-- TextView: click go to LoginActivity-->
+        <TextView
+            android:id="@+id/have_accountTv"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Already have account? Login"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            android:layout_below="@id/registerBtnS"
+            android:layout_marginTop="5dp"
+            android:textColor="#000"/>
+</RelativeLayout>
+
